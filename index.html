@@ -1,3 +1,23 @@
-111111111111111111
-2222222222222
-33333333333
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0;padding:0}
+        .box{
+            width:400px;
+            height:400px;
+            border-radius: 200px;
+            margin: 100px auto;
+            background-image: radial-gradient(
+            200px at 20px 20px,
+            red,blue
+            );/*用at来分割，前面是渐变的半径，渐变的起点（即中心点）*/
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+</body>
+</html>
