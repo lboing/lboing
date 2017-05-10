@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-1.8.3.min.js"></script>
+    <style>
+        .box{
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            float: left;
+            background: pink;
+        }
+        .wrap{
+            width: 200px;
+            height: 20px;
+            margin: 100px auto;
+        }
+        .col{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+
+<script>
+    $(function()
+    {
+        $(".box").hover(function()
+        {
+            var i=$(this).index();
+           $(".box").eq(i).addClass("col").siblings().removeClass("col")
+            if(i==1)
+            {
+                $(".box").eq(1).addClass("col").prev().addClass("col")
+            }
+            if(i==2)
+            {
+                $(".box").eq(2).addClass("col").prev().addClass("col").prev().addClass("col")
+            }
+            if(i==3)
+            {
+                $(".box").eq(3).addClass("col").prev().addClass("col").prev().addClass("col").prev().addClass("col")
+            }
+            if(i==4)
+            {
+                $(".box").eq(4).addClass("col").prev().addClass("col").prev().addClass("col").prev().addClass("col").prev().addClass("col")
+            }
+        },function(){
+            $(".box").removeClass("col")
+        })
+    })
+</script>
+</body>
+</html>
